@@ -1,0 +1,91 @@
+<!-- HTML DOM allows JavaScript to react to HTML events: -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event In JavaScript</title>
+    <script>
+
+      function myFuction1() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+     function myFuction2()
+     {
+        var y=document.getElementById("name");
+        y.value=y.value.toUpperCase();
+     }
+
+     function preferedBrowser()
+      {
+      prefer = document.forms[0].browsers.value;
+      alert("You prefer browsing internet with " + prefer);
+      }
+
+      function myFunction3(x)
+       {
+       x.style.background = "yellow";
+       }
+    </script>
+  </head>
+  <body>
+    <!-- ............onclick() Event................. -->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">
+      The time is
+    </button>
+    <h3 id="demo"></h3>
+
+    <!-- .................onblur() Event........................ -->
+
+    Enter your name:
+    <input type="text" id="fname" onblur="  myFuction1()"   />
+    <br><br>
+
+    <!-- When you leave the input field, a function is triggered which transforms the
+    input text to upper case. -->
+
+    <!-- ........................onchange() Event...................-->
+
+    Enter your name:
+    <input type="text" id="name" onchange="myFuction2()">
+    <br><br>
+
+    <!-- When you leave the input field, a function is triggered which transforms the
+    input text to upper case. -->
+       <form>
+        Choose which browser you prefer:
+          <select id="browsers" onchange="preferedBrowser()">
+            <option value="Chrome">Chrome</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+            <option value="Firefox">Firefox</option>
+          </select>
+        </form>
+        <br>
+
+
+        <!-- .......................onfocus() Event.............. -->
+        
+        Enter your name: <input type="text" onfocus="myFunction3(this)">
+
+
+    <!-- list of HTML events
+
+    1.onchange------An HTML element has been changed when a user changes the content of an input field
+    2.onclick-------The user clicks an HTML element
+    3.onmouseover----The user moves the mouse over an HTML element
+    4.onmouseout-----The user moves the mouse away from an HTML element
+    5.onkeydown-------The user pushes a keyboard key
+    6.onload----------The browser has finished loading the page 
+    7.onblur----------when a user leaves an input field  
+    8.onchange--------when a user changes the content of an input field
+    9.onfocus---------when an input field get focus
+    10.onselect-------when input yexy is selected
+    11.onsubmit-------when a user click the submit button
+    12.onreset-------when a user clicks the reset button
+    13.onkeydown-----when a user is pressing/holding down a key
+    14.onkeypress----when  a user is pressing/holding down a key 
+    15.onkeyup-------when the user releases a key  -->
+  </body>
+</html>
